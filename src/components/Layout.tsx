@@ -34,12 +34,13 @@ function Header() {
   >
     <Icon name="pin" />Yousufguda Checkpost, Hyderabad
   </a>
-  <a
-    href="mailto:{adinarayana@sclogistics.in"
-    style={{ color: 'inherit', textDecoration: 'none' }}
-  >
-    <Icon name="mail" />{EMAIL}
-  </a>
+ <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=adinarayana@sclogistics.in"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  adinarayana@sclogistics.in
+</a>
           </div>
           <div className="r">Safe journeys. Dependable operations.</div>
         </div>
