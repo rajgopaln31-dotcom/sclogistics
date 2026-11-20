@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
 import Icon from './Icon';
-import { EMAIL, NAV, PHONE, PHONE_HREF } from '../data/site';
+import {  NAV, PHONE, PHONE_HREF } from '../data/site';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -138,7 +138,13 @@ function Footer() {
   </p>
 
   <p style={{ marginTop: 12 }}>
-    <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+    <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=adinarayana@sclogistics.in"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  adinarayana@sclogistics.in
+</a>
   </p>
 </div>
         </div>
