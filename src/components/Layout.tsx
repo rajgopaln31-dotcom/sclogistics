@@ -150,7 +150,16 @@ function Footer() {
         </div>
         <div className="copy">
           <span>&copy; 2026 Sri Chinimilli Logistics Pvt. Ltd.</span>
-          <span>Designed and developed by <b>Megaviz Technologies</b></span>
+        <span>
+  Designed and developed by{" "}
+  <a
+    href="https://megaviztech.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <b>Megaviz Technologies</b>
+  </a>
+</span>
         </div>
       </div>
     </footer>

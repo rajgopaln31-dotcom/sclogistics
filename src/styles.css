@@ -573,3 +573,301 @@ img,
 .topbar .l a:hover::after {
   width: 100%;
 }
+span a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+span a:hover {
+  text-decoration: underline;
+}
+/* VIDEO BACKGROUND - PRESERVE ORIGINAL HERO POSITIONS */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: none !important;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+ 
+  z-index: -1;
+  pointer-events: none;
+}
+/* ABOUT PAGE VIDEO BANNER */
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.page-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  inset: 0;
+ 
+  z-index: -1;
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero .eyebrow,
+.page-hero h1,
+.page-hero p {
+  color: #ffffff;
+}
+/* =================================
+   PREMIUM CARD HOVER ANIMATIONS
+================================= */
+
+/* Common Cards */
+.cards5 .c,
+.s6 .c,
+.feat4 .c,
+.guide > div,
+.fb > div,
+.ins .a,
+.team .members > div,
+.formcard {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(31, 66, 96, 0.10);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+/* Card Hover */
+.cards5 .c:hover,
+.s6 .c:hover,
+.feat4 .c:hover,
+.guide > div:hover,
+.fb > div:hover,
+.ins .a:hover,
+.team .members > div:hover,
+.formcard:hover {
+  transform: translateY(-10px);
+  border-color: #f47c20;
+  box-shadow: 0 18px 40px rgba(20, 50, 75, 0.16);
+}
+
+/* Card Top Orange Line */
+.cards5 .c::before,
+.s6 .c::before,
+.feat4 .c::before,
+.guide > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: #f47c20;
+  transition: width 0.4s ease;
+}
+
+.cards5 .c:hover::before,
+.s6 .c:hover::before,
+.feat4 .c:hover::before,
+.guide > div:hover::before {
+  width: 100%;
+}
+
+/* Card Images */
+.ins .a img,
+.gallery img,
+.ov-img img,
+.team img {
+  transition: transform 0.6s ease;
+}
+
+.ins .a:hover img,
+.gallery a:hover img,
+.ov-img:hover img,
+.team:hover img {
+  transform: scale(1.05);
+}
+
+/* Icons Animation */
+.cards5 .ico,
+.guide svg,
+.cards5 .ico svg {
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.cards5 .c:hover .ico,
+.guide > div:hover svg {
+  transform: scale(1.15) rotate(5deg);
+  color: #f47c20;
+}
+
+/* Smooth Text Color */
+.cards5 .c h4,
+.guide > div h4,
+.ins .a h4 {
+  transition: color 0.3s ease;
+}
+
+.cards5 .c:hover h4,
+.guide > div:hover h4,
+.ins .a:hover h4 {
+  color: #f47c20;
+}
+
+/* Button Hover */
+.btn {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(244, 124, 32, 0.25);
+}
+
+/* Smooth Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  .cards5 .c,
+  .s6 .c,
+  .feat4 .c,
+  .guide > div,
+  .fb > div,
+  .ins .a,
+  .team .members > div,
+  .formcard,
+  .gallery img,
+  .btn {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* Mobile: Avoid excessive movement */
+@media (max-width: 768px) {
+  .cards5 .c:hover,
+  .s6 .c:hover,
+  .feat4 .c:hover,
+  .guide > div:hover,
+  .fb > div:hover,
+  .ins .a:hover,
+  .team .members > div:hover,
+  .formcard:hover {
+    transform: translateY(-3px);
+  }
+}
+/* =====================================
+   PREMIUM ROTATING BUTTON LIGHT EFFECT
+===================================== */
+
+.btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 6px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Rotating light border */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: -150%;
+  z-index: -1;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 270deg,
+    #ff6500 310deg,
+    #ffffff 330deg,
+    #ff6500 345deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Inner button background */
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  z-index: -1;
+  background: inherit;
+  border-radius: 4px;
+}
+
+/* Hover animation */
+.btn:hover::before {
+  opacity: 1;
+  animation: buttonLightRotate 2s linear infinite;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px rgba(255, 101, 0, 0.35),
+              0 0 22px rgba(255, 101, 0, 0.2);
+}
+
+@keyframes buttonLightRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Keyboard focus */
+.btn:focus-visible {
+  outline: 2px solid #ff6500;
+  outline-offset: 4px;
+}
+
+/* Mobile touch devices */
+@media (hover: none) {
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .btn:hover::before {
+    animation: none;
+  }
+}

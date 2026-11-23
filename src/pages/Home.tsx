@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm';
 import Clients from '../components/Clients';
 import Cta from '../components/Cta';
 
+
 interface Pillar { title: string; text: string; icon: IconName }
 
 const PILLARS: Pillar[] = [
@@ -41,6 +42,20 @@ export default function Home() {
   return (
     <>
       <section className="hero">
+
+  {/* Video Background */}
+  <video
+    className="hero-video"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="images/video.mp4"type="video/mp4" />
+  </video>
+
+  {/* Dark Overlay */}
+  <div className="hero-video-overlay"></div>
         <div className="container">
           <div className="eyebrow light">Welcome to Sri Chinimilli Logistics Pvt. Ltd.</div>
           <h1>Efficient and Effective Transportation</h1>

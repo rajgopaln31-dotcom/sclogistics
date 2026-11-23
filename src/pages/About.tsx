@@ -23,6 +23,7 @@ export default function About() {
   const [lb, setLb] = useState<string | null>(null);
   return (
     <>
+    
       <PageHero eyebrow="About Sri Chinimilli Logistics" title="A journey built on trust" text="Local expertise, disciplined operations and a clear commitment to safer movement." image="swift-front.jpg" />
 
       <section>
